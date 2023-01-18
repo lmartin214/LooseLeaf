@@ -1,0 +1,33 @@
+{
+  "name": "looseleaf",
+  "version": "1.0.0",
+  "description": "An e-commerce web React @App",
+  "main": "server/server.js",
+  "scripts": {
+    "start": "node server/server.js --ignore client",
+    "develop": "concurrently \"cd server && npm run watch\" \"cd client && npm start\"",
+    "install": "cd server && npm i && cd ../client && npm i",
+    "seed": "cd server && npm run seed",
+    "build": "cd client && npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lmartin214/looseleaf.git"
+  },
+  "author": "",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/lmartin214/looseleaf/issues"
+  },
+  "homepage": "https://github.com/lmartin214/looseleaf#readme",
+  "devDependencies": {
+    "concurrently": "^7.6.0"
+  },
+  "dependencies": {
+    "apollo-server-express": "^2.26.1",
+    "bcrypt": "^5.1.0",
+    "express": "^4.18.2",
+    "graphql": "^15.8.0",
+    "mongoose": "^6.8.4"
+  }
+}
