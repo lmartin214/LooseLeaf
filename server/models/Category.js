@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-
+//Schema for Category
 const { Schema } = mongoose;
 
 const categorySchema = new Schema({

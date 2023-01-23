@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-
+//Schema for Order
 const { Schema } = mongoose;
 
 const orderSchema = new Schema({
@@ -10,8 +10,8 @@ const orderSchema = new Schema({
   products: [
     {
       type: Schema.Types.ObjectId,
-      ref: 'Product'
-    }
+      ref: 'Product',
+    },
   ]
 });
 

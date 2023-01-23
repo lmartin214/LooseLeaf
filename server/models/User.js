@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-
+//Schema for User
 const { Schema } = mongoose;
 const bcrypt = require('bcrypt');
 const Order = require('./Order');
@@ -28,7 +28,7 @@ const userSchema = new Schema({
   orders: [Order.schema]
 });
 
-//custom pre-save middleware to create password
+//custom pre-save middleware to create hashed password
 userSchema.pre('save', async function(next) {
   if (this.isNew || this.isModified('password')) {
     const saltRounds = 10;

@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-
+//Schema for Product
 const { Schema } = mongoose;
 
 const productSchema = new Schema({
@@ -17,7 +17,7 @@ const productSchema = new Schema({
   price: {
     type: Number,
     required: true,
-    min: 19.99
+    min: 9.99
   },
   quantity: {
     type: Number,
