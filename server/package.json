@@ -6,12 +6,12 @@
     "scripts": {
         "start": "node server.js",
         "watch": "nodemon",
-        "seed": "node seeders/seed.js"
+        "seed": "node config/seed.js"
     },
     "author": "",
     "license": "Apache-2.0",
     "dependencies": {
-        "apollo-server-express": "^3.6.2",
+        "@apollo/server": "^4.3.1",
         "bcrypt": "^5.0.0",
         "express": "^4.17.2",
         "graphql": "^16.3.0",
