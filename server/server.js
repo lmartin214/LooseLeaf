@@ -1,15 +1,17 @@
 const express = require('express');
 const { ApolloServer } = require('apollo-server-express'); // Import the ApolloServer class 
 const path = require('path');
+const { authMiddleware } = require ('./utils/auth');
 
 const { typeDefs, resolvers } = require('./schemas'); // Import of GraphQL schema that connects database and routes 
 const db = require('./config/connection');
 
-const PORT = process.env.PORT || 3004;
+const PORT = process.env.PORT || 3001;
 const app = express();
 const server = new ApolloServer({
   typeDefs,
   resolvers,
+  context: authMiddleware,
 });
 
 app.use(express.urlencoded({ extended: false }));
