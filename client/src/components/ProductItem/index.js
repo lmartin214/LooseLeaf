@@ -19,8 +19,8 @@ function ProductItem(item) {
   } = item;
 
   const { cart } = state
-/*adds the item to the cart, either by updating the quantity if the item is already in the cart, 
-or by adding the item to the cart if it is not already there*/
+//adds the item to the cart, either by updating the quantity if the item is already in the cart, 
+//or by adding the item to the cart if it is not already there
   const addToCart = () => { 
     const itemInCart = cart.find((cartItem) => cartItem._id === _id)
     if (itemInCart) {
