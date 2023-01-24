@@ -1,6 +1,7 @@
 const jwt = require('jsonwebtoken');
 
-const secret =  process.env.JWT_TOKEN;
+// const secret =  process.env.JWT_TOKEN;
+const secret =  'mysecretsshhhhh';
 const expiration = '2h';
 //This code exports an authMiddleware and signToken function to allow for authentication.
 module.exports = {
@@ -28,6 +29,9 @@ module.exports = {
   },
   signToken: function ({ firstName, email, _id }) { //creates and signs a token
     const payload = { firstName, email, _id };
+
+    console.log(payload);
+    console.log(secret);
 
     return jwt.sign({ data: payload }, secret, { expiresIn: expiration });
   },

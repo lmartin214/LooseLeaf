@@ -112,7 +112,9 @@ const resolvers = {
   Mutation: {
     addUser: async (parent, args) => {//Adds a new user to the database and returns a JSON web token 
       const user = await User.create(args);
+
       const token = signToken(user);
+    console.log(token)
 
       return { token, user };
     },
